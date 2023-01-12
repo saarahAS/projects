@@ -21,7 +21,9 @@ h2 {
   font-size: 2vw;
 }
 
-
+.centred {
+  align-self: center;
+}
 
 .periodicTable {
   display: grid;
@@ -29,7 +31,6 @@ h2 {
   grid-template-columns: repeat(19, 5.25vw);
   grid-template-rows: (9, 10vh);
   padding-right: 50px;
-  /* padding-left: 10px; */
 }
 
 .rowNumber {
@@ -114,7 +115,11 @@ h2 {
   background-color: #aeffff;
 }
 
-@media screen and (max-width: 600px) {
+#image {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
   body {
     background-color: darkorchid;
   }
@@ -122,18 +127,21 @@ h2 {
   h2 {
     color: black;
   }
-
   .name,
   .chemicalGroupBlock {
     display: none;
   }
 
-  .legend {
-    display: none;
-
+  .spacing {
+    height: 1vw;
   }
 }
 
-.spacing {
-  height: 1vw;
+@media screen and (max-width: 600px) {
+  .periodicTable {
+    display: none;
+  }
+  #image {
+    display: block;
+  }
 }
