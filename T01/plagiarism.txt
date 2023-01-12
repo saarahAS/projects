@@ -1,0 +1,23 @@
+Compulsory Task 3
+
+1. What is plagiarism?
+Plagiarism is taking someone else's work and pretending it is your own.
+
+
+2. 4 types of plagiarism:
+
+A) direct plagiarism - copying something from a book or article and pretending it's your own idea
+
+B) self-plagiarism - copying something you've written previously in a new source without referencing the old one
+
+C) mosaic plagiarism - putting together information taken from multiple different places to make it look like your own/something new
+
+D) accidental plagiarism - copying something without realising, such as if you read something in a book or online, or discussed something with someone some time ago and then forget about it. Sometime later you may come up with ideas that were based on those readings or conversations, without remembering where the idea came from and think it is your own.
+
+3. How to avoid plagiarism in your work?
+You can avoid plagiarism by submitting original work only, but if necessary, referencing all material borrowed from another source, explaining where you got help from and how it helped you, and leaving comments on your code to show that you understand what you have borrowed from other sources, not just copied it blindly
+
+
+
+References:
+“Additional Reading Plagiarism Policy” (2021). Hyperiondev. 

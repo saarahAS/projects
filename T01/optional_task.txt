@@ -1,0 +1,11 @@
+Optional Bonus Task
+
+
+begin
+request a positive number from user
+store input in variable 'n'
+if 'n' can only be divided by 1 and 'n' (itself)
+print 'Prime'
+if 'n' can be divided by anything other than 1 and 'n' (itself)
+print 'Not prime'
+end

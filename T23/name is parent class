@@ -1,0 +1,4 @@
+name is parent class
+typ eo femployee is child classmethod overiding to calculate salary because its different in each 
+after 2 instances of each, add to array then iterate through array and call a method within child that will do that calculations 
+name (type): £xxxx ((hours worked * hourly rate) + (hourly rate * 50%))

@@ -1,0 +1,74 @@
+/*Style Sheet for tribute.html*/
+
+/* elements included in the body excluding <main> and <aside> */
+body {
+  background-color: ivory;
+}
+
+header {
+  font-size: x-large;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+}
+
+#navList > li {
+  text-align: center;
+  display: inline;
+  margin: 100px;
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#navList {
+  text-align: center;
+  border-style: double;
+  background-color: salmon;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+#quote {
+  text-align: right;
+  font-style: italic;
+  color: orangered;
+  font-weight: bold;
+}
+
+/* elements included in the <main> section*/
+h1, /*h1 is not included in <main> but is grouped here to share h2/3 formatting*/
+h2,
+h3 {
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h2 {
+  color: darkgreen;
+}
+h3 {
+  color: orangered;
+}
+
+#timeline {
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+}
+
+/* elements included in the <aside> section*/
+aside {
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+}
+
+figure {
+  text-align: center;
+  color: darkgreen;
+}
+img {
+  width: 7cm;
+  height: auto;
+}

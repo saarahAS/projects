@@ -1,0 +1,15 @@
+Compulsory Task 2
+
+
+begin
+request user to input name 
+store response in variable 'firstName'
+print "Hello " + 'firstName'
+end
+
+begin
+request user to input their age 
+store response in variable 'age'
+subtract inputted age from current year
+print "Based on your age of [age given], it looks like you were born in [year calculated]."
+end

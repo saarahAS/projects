@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3vw;
+  text-align: center;
+  padding-top: 1vw;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vw;
+}
+
+
+
+.periodicTable {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(19, 5.25vw);
+  grid-template-rows: (9, 10vh);
+  padding-right: 50px;
+  /* padding-left: 10px; */
+}
+
+.rowNumber {
+  font-size: 1vw;
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+  width: 30%;
+  justify-self: right;
+  align-self: center;
+}
+
+.colNumber {
+  font-size: 1vw;
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+  align-self: end;
+}
+
+.elementBox {
+  /* text-align: centre; */
+  border-style: solid;
+  border-color: gray;
+  border-width: 1px;
+  margin: 1px;
+  text-align: center;
+}
+
+.atomicNumber {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+}
+
+.symbol {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vw;
+}
+
+.name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+  overflow: hidden;
+}
+
+.chemicalGroupBlock {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75vw;
+}
+
+.yellow {
+  background-color: #ffffc5;
+}
+
+.blue {
+  background-color: #b9dbfc;
+}
+
+.green {
+  background-color: #c4ffc4;
+}
+
+.dullGreen {
+  background-color: #dfedb9;
+}
+
+.pink {
+  background-color: #ffcaca;
+}
+
+.orange {
+  background-color: #fae3c3;
+}
+
+.purple {
+  background-color: #d1d1ff;
+}
+
+.mint {
+  background-color: #c0fee9;
+}
+
+.lightBlue {
+  background-color: #aeffff;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: darkorchid;
+  }
+  h1,
+  h2 {
+    color: black;
+  }
+
+  .name,
+  .chemicalGroupBlock {
+    display: none;
+  }
+
+  .legend {
+    display: none;
+
+  }
+}
+
+.spacing {
+  height: 1vw;
+}

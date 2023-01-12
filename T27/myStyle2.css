@@ -1,0 +1,102 @@
+/*Style Sheet for tribute.html*/
+
+/* elements included in the body excluding <main> and <aside> */
+body {
+  background-color: ivory;
+}
+
+header {
+  font-size: x-large;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+}
+
+#navList > li {
+  text-align: center;
+  display: inline;
+  margin: 100px;
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#navList {
+  text-align: center;
+  border-style: double;
+  background-color: salmon;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  color: brown;
+  padding: 10px 20px;
+}
+
+/* creating class selector to apply to elements on html page */
+.myStyle {
+  font-size: 25px;
+  line-height: 20px;
+  color: plum;
+  font-family: monospace;
+  padding: 4px;
+  margin-left: 6px;
+}
+
+/* elements included in the <main> section*/
+h1, /*h1 is not included in <main> but is grouped here to share h2/3 formatting*/
+h2,
+h3 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+h2 {
+  color: darkgreen;
+  font-style: italic;
+}
+h3 {
+  color: orangered;
+  width: 25%;
+}
+
+#para1 {
+  color: navy;
+  width: 32%; /* border to fit text width  */
+  border-color: springgreen;
+  border-style: dashed solid;
+  border-width: 5px;
+}
+
+ul,
+/* navList is not in <main> but shares formating with <ul>*/
+#navList {
+  background-color: cadetblue;
+}
+
+#timeline {
+  width: 70%;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  border-radius: 5px;
+  background: #2152ad;
+  padding: 10px;
+}
+
+/* elements included in the <aside> section*/
+aside {
+  text-indent: 20px;
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+}
+
+figure {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  color: darkgreen;
+}
+img {
+  width: 7cm;
+  height: auto;
+  border: blue solid 3px;
+}

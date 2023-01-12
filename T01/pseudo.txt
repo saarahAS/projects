@@ -1,0 +1,39 @@
+Compulsory Task 1
+
+1.
+
+Begin
+request user to enter random letter
+if letter is a vowel, add 1 to count
+repeat request 
+if user inputs number then stop request
+Print count
+End
+
+
+2.
+
+begin 
+read list of integers
+if integer is divisible by 2:
+	store the integer in list (even)
+	increase the count of even numbers by 1 (countEven)
+if the integer is not divisible by 2:
+	store integer in another list (odd)
+	increase count of odd numbers by 1 (countOdd)
+add the numbers in 'even' together (evenTotal)
+add the numbers 'odd' together (oddTotal)
+calculate the average of the odd and even numbers
+print average 
+end
+
+
+
+3.
+begin
+create array of names
+sort array in alphabetical order
+print sorted array
+end
+
+-----
