@@ -5,17 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./myStyle.css" />
-    <title>Period Table</title>
+    <title>Periodic Table</title>
   </head>
   <body>
     <h1>Periodic Table of Elements</h1>
 
     <h2>Chemical Group Block</h2>
 
+    <!--image to replace table with when screen is less than 600px-->
     <img src="periodicTable.png" alt="periodic table" id="image" />
 
+    <!--main container for period table-->
     <div class="periodicTable">
+      <!--blank space above row 1-->
       <div>&nbsp;</div>
+      <!--row of column numbers 1 and 18, with blanks in between to create correct spacing in table-->
       <div class="colNumber">1</div>
       <div>&nbsp;</div>
       <div>&nbsp;</div>
@@ -36,8 +40,11 @@
       <div class="colNumber">18</div>
 
       <!--row 1-->
+      <!--label for first row-->
       <div class="rowNumber">1</div>
 
+      <!--structure of <div>s are as follows for each element in the periodic table-->
+      <!--elements contained within "elementBox" to create styling for each box-->
       <div class="elementBox yellow">
         <div class="atomicNumber">1</div>
         <div class="symbol">H</div>
@@ -129,7 +136,7 @@
         <div class="atomicNumber">9</div>
         <div class="symbol">F</div>
         <div class="name">Flourine</div>
-        <div class="chemicalGroupBlock">Halogen</div>
+        <div class="chemicalGroupBlock">Nonmetal</div>
       </div>
 
       <div class="elementBox orange">
@@ -200,7 +207,7 @@
         <div class="atomicNumber">17</div>
         <div class="symbol">Cl</div>
         <div class="name">Chlorine</div>
-        <div class="chemicalGroupBlock">Halogen</div>
+        <div class="chemicalGroupBlock">Nonmetal</div>
       </div>
 
       <div class="elementBox orange">
@@ -224,7 +231,7 @@
         <div class="atomicNumber">20</div>
         <div class="symbol">Ca</div>
         <div class="name">Calcium</div>
-        <div class="chemicalGroupBlock">Alkali Ear</div>
+        <div class="chemicalGroupBlock">Alkaline Earth Metal</div>
       </div>
 
       <div class="elementBox blue">
@@ -250,49 +257,49 @@
         <div class="atomicNumber">24</div>
         <div class="symbol">Ca</div>
         <div class="name">Calcium</div>
-        <div class="chemicalGroupBlock">Alkali Ear</div>
+        <div class="chemicalGroupBlock">Transition Metal</div>
       </div>
 
       <div class="elementBox blue">
         <div class="atomicNumber">25</div>
         <div class="symbol">Mn</div>
         <div class="name">Manganese</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Transition Metal</div>
       </div>
 
       <div class="elementBox blue">
         <div class="atomicNumber">26</div>
         <div class="symbol">Fe</div>
         <div class="name">Iron</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Transition Metal</div>
       </div>
 
       <div class="elementBox blue">
         <div class="atomicNumber">27</div>
         <div class="symbol">Co</div>
         <div class="name">Cobalt</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Transition Metal</div>
       </div>
 
       <div class="elementBox blue">
         <div class="atomicNumber">28</div>
         <div class="symbol">Ni</div>
         <div class="name">Nickel</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Transition Metal</div>
       </div>
 
       <div class="elementBox blue">
         <div class="atomicNumber">29</div>
         <div class="symbol">Cu</div>
         <div class="name">Copper</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Transition Metal</div>
       </div>
 
       <div class="elementBox blue">
         <div class="atomicNumber">30</div>
         <div class="symbol">Zn</div>
         <div class="name">Zinc</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Transition Metal</div>
       </div>
 
       <div class="elementBox green">
@@ -306,28 +313,28 @@
         <div class="atomicNumber">32</div>
         <div class="symbol">Ge</div>
         <div class="name">Geranium</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Metalloid</div>
       </div>
 
       <div class="elementBox dullGreen">
         <div class="atomicNumber">33</div>
         <div class="symbol">As</div>
         <div class="name">Arsenic</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Metalloid</div>
       </div>
 
       <div class="elementBox yellow">
         <div class="atomicNumber">30</div>
         <div class="symbol">Se</div>
         <div class="name">Selenium</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Nonmetal</div>
       </div>
 
       <div class="elementBox yellow">
         <div class="atomicNumber">35</div>
         <div class="symbol">Br</div>
         <div class="name">Bromine</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Nonmetal</div>
       </div>
 
       <div class="elementBox orange">
@@ -351,70 +358,70 @@
         <div class="atomicNumber">38</div>
         <div class="symbol">Sr</div>
         <div class="name">Stronium</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Alkaline Earth Metal</div>
       </div>
 
       <div class="elementBox blue">
         <div class="atomicNumber">39</div>
         <div class="symbol">Y</div>
         <div class="name">Yttrium</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Transition Metal</div>
       </div>
 
       <div class="elementBox blue">
         <div class="atomicNumber">40</div>
         <div class="symbol">Zr</div>
         <div class="name">Zirconium</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Transition Metal</div>
       </div>
 
       <div class="elementBox blue">
         <div class="atomicNumber">41</div>
         <div class="symbol">Nb</div>
         <div class="name">Noibium</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Transition Metal</div>
       </div>
 
       <div class="elementBox blue">
         <div class="atomicNumber">42</div>
         <div class="symbol">Mo</div>
         <div class="name">Molybdenum</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Transition Metal</div>
       </div>
 
       <div class="elementBox blue">
         <div class="atomicNumber">43</div>
         <div class="symbol">Tc</div>
         <div class="name">Technetium</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Transition Metal</div>
       </div>
 
       <div class="elementBox blue">
         <div class="atomicNumber">44</div>
         <div class="symbol">Ru</div>
         <div class="name">Ruthenium</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Transition Metal</div>
       </div>
 
       <div class="elementBox blue">
         <div class="atomicNumber">45</div>
         <div class="symbol">Rh</div>
         <div class="name">Rhodium</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Transition Metal</div>
       </div>
 
       <div class="elementBox blue">
         <div class="atomicNumber">46</div>
         <div class="symbol">Pd</div>
         <div class="name">Palladium</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Transition Metal</div>
       </div>
 
       <div class="elementBox blue">
         <div class="atomicNumber">47</div>
         <div class="symbol">Ag</div>
         <div class="name">Silver</div>
-        <div class="chemicalGroupBlock">Alkali Earth</div>
+        <div class="chemicalGroupBlock">Transition Metal</div>
       </div>
 
       <div class="elementBox blue">
@@ -442,21 +449,21 @@
         <div class="atomicNumber">51</div>
         <div class="symbol">Sb</div>
         <div class="name">Antimony</div>
-        <div class="chemicalGroupBlock">Post-Transition Metal</div>
+        <div class="chemicalGroupBlock">Metalloid</div>
       </div>
 
       <div class="elementBox dullGreen">
         <div class="atomicNumber">52</div>
         <div class="symbol">Te</div>
         <div class="name">Tellurium</div>
-        <div class="chemicalGroupBlock">Post-Transition Metal</div>
+        <div class="chemicalGroupBlock">Metalloid</div>
       </div>
 
       <div class="elementBox yellow">
         <div class="atomicNumber">53</div>
         <div class="symbol">I</div>
         <div class="name">Iodine</div>
-        <div class="chemicalGroupBlock">Halogen</div>
+        <div class="chemicalGroupBlock">Nonmetal</div>
       </div>
 
       <div class="elementBox orange">
@@ -479,7 +486,7 @@
         <div class="atomicNumber">56</div>
         <div class="symbol">Ba</div>
         <div class="name">Barium</div>
-        <div class="chemicalGroupBlock">Post-Transition Metal</div>
+        <div class="chemicalGroupBlock">Alkaline Earth Metal</div>
       </div>
 
       <div class="centred">*</div>
@@ -579,7 +586,7 @@
         <div class="atomicNumber">85</div>
         <div class="symbol">At</div>
         <div class="name">Astatine</div>
-        <div class="chemicalGroupBlock">Halogen</div>
+        <div class="chemicalGroupBlock">Nonmetal</div>
       </div>
 
       <div class="elementBox orange">
@@ -702,7 +709,7 @@
         <div class="atomicNumber">117</div>
         <div class="symbol">Ts</div>
         <div class="name">Tennessine</div>
-        <div class="chemicalGroupBlock">Post-Transition Metal</div>
+        <div class="chemicalGroupBlock">Nonmetal</div>
       </div>
 
       <div class="elementBox orange">
