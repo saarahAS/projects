@@ -1,6 +1,6 @@
 // Using code from Task 12.3, replacing all functions with arrow functions
 
-// calculator for 2 user inputted numbers 
+// calculator for 2 user inputted numbers
 
 /*old add function:
 function add(a, b) {
@@ -14,26 +14,28 @@ function subtract(a, b) {
   return a - b;
 } */
 
-const subtract = (a, b) => a - b
+const subtract = (a, b) => a - b;
 
 /* old multiply function:
  function multiply(a, b) {
   return a * b;
  } */
 
- const multiply = (a, b) => a * b
+const multiply = (a, b) => a * b;
 
 /* old divide function:
 function divide(a, b) {
   return a / b;
 }*/
 
-const divide = (a, b) => a/b
+const divide = (a, b) => a / b;
 
 //converting string to number
 let number1 = Number(prompt("Please enter your first number:"));
 let number2 = Number(prompt("Please enter your second number:"));
-let operation = prompt("Please enter your operation of choice: add, subtract, multiply, divide");
+let operation = prompt(
+  "Please enter your operation of choice: add, subtract, multiply, divide"
+);
 let result;
 let operator;
 
