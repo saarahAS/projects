@@ -4,21 +4,190 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bright & Merry</title>
-    <link rel="stylesheet" href="./bmLogo.css" />
+    <title>my ivory plate</title>
+    <link rel="stylesheet" href="./myIPstyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-  <header>
-    <div class="logo">
-      <img src="BMlogo.png" alt="logo with fruit" class="logo" />
-    </div>
-  </header>
-  <nav class="navBar">
-    <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Contact</li>
-    </ul>
-  </nav>
-  <body></body>
+  <body>
+    <header>
+      <div class="flex-container">
+        <img class="logo" src="./logo.png" alt="my ivory plate logo" />
+
+        <nav>
+          <ul class="menu">
+            <li class="menuItem"><a href="./index.html">home</a></li>
+            <li class="menuItem"><a href="./about.html">about</a></li>
+            <li class="menuItem">
+              <a href="mailto:myivoryplate@outlook.com" target="_blank"
+                >contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <br />
+    <br />
+    <br />
+
+    <main>
+      <h1>what's on your plate today?</h1>
+
+      <nav>
+        <ul class="recipeCategories">
+          <li class="category"><a href="./breakfast.html">breakfast</a></li>
+          <li class="category"><a href="./snacks.html">snacks</a></li>
+          <li class="category"><a href="./dinner.html">dinner</a></li>
+        </ul>
+      </nav>
+      <div class="imageGrid">
+        <article>
+          <img
+            class="recipeImage"
+            src="https://www.ennerdalebrewery.co.uk/wp-content/uploads/woocommerce-placeholder.png"
+            alt="placeholder"
+          />
+        </article>
+
+        <article>
+          <img
+            class="recipeImage"
+            src="https://www.ennerdalebrewery.co.uk/wp-content/uploads/woocommerce-placeholder.png"
+            alt="placeholder"
+          />
+        </article>
+
+        <article>
+          <img
+            class="recipeImage"
+            src="https://www.ennerdalebrewery.co.uk/wp-content/uploads/woocommerce-placeholder.png"
+            alt="placeholder"
+          />
+        </article>
+      </div>
+
+      <p class="quote">"the secret ingredient is always love"</p>
+
+      <div>
+        <h2>weekly meal plan</h2>
+        <table class="mealPlan">
+          <tr class="tableHeader">
+            <th>day</th>
+            <th>breakfast</th>
+            <th>lunch</th>
+            <th>dinner</th>
+          </tr>
+
+          <tr>
+            <td class="day">mon</td>
+            <td class="meal">american pancakes</td>
+            <td class="meal">chickpea curry jacket potatoes</td>
+            <td class="meal">chicken pasta bake</td>
+          </tr>
+
+          <tr>
+            <td class="day">tue</td>
+            <td class="meal">poached eggs with smoked salmon</td>
+            <td class="meal">chicken satay salad</td>
+            <td class="meal">vegetarian lasagne</td>
+          </tr>
+
+          <tr>
+            <td class="day">wed</td>
+            <td class="meal">overnight oats</td>
+            <td class="meal">veggie wraps</td>
+            <td class="meal">fish pie with kale</td>
+          </tr>
+
+          <tr>
+            <td class="day">thu</td>
+            <td class="meal">baked beans and toast</td>
+            <td class="meal">chicken and veggie hummus bowl</td>
+            <td class="meal">mustard & parmesan chicken</td>
+          </tr>
+
+          <tr>
+            <td class="day">fri</td>
+            <td class="meal">savoury crepes</td>
+            <td class="meal">lentil and tuna salad</td>
+            <td class="meal">pizza</td>
+          </tr>
+
+          <tr>
+            <td class="day">sat</td>
+            <td class="meal">french toast</td>
+            <td class="meal">cauliflower soup</td>
+            <td class="meal">salmon and peas pasta</td>
+          </tr>
+
+          <tr>
+            <td class="day">sun</td>
+            <td class="meal">cheese crumpets</td>
+            <td class="meal">burrito bowl with black beans</td>
+            <td class="meal">meatballs and garlic bread</td>
+          </tr>
+        </table>
+      </div>
+
+      <br />
+      <br />
+      <br />
+
+      <div class="flex-container2">
+        <div class="leftContainter">
+          <p class="survey">what would you like to see more of?</p>
+          <div class="surveyOptions">
+            <input
+              type="radio"
+              id="option1"
+              name="category"
+              value="breakfast"
+            />
+            <label for="option1">breakfast</label><br />
+            <input type="radio" id="option2" name="category" value="snacks" />
+            <label for="option2">snacks</label><br />
+            <input type="radio" id="option3" name="category" value="dinner" />
+            <label for="option3">dinner</label><br /><br />
+            <input type="submit" value="Submit" />
+          </div>
+        </div>
+
+        <div class="rightContainter">
+          <a href="https://www.instagram.com/myivoryplate/" target="_blank"
+            ><img class="picture" src="./pic.png"
+          /></a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <h3 class="subscribe">inspo to your inbox:</h3>
+      <div class="form">
+        <form action="/action_page.php">
+          <label for="fname">your name:</label><br />
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="first name"
+          /><br />
+          <label for="email">email address:</label><br />
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            placeholder="example@email.com"
+          /><br /><br />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </footer>
+  </body>
 </html>

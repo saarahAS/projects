@@ -1,3 +1,5 @@
+/* styling for my periodic table page  */
+
 * {
   box-sizing: border-box;
 }
@@ -21,10 +23,16 @@ h2 {
   font-size: 2vw;
 }
 
+/* to centre * on table */
 .centred {
   align-self: center;
 }
 
+/* added space before last two rows */
+.spacing {
+  height: 1vw;
+}
+/* grid styling of table */
 .periodicTable {
   display: grid;
   justify-content: center;
@@ -33,6 +41,7 @@ h2 {
   padding-right: 50px;
 }
 
+/* format for row numbers */
 .rowNumber {
   font-size: 1vw;
   font-family: Arial, Helvetica, sans-serif;
@@ -42,6 +51,7 @@ h2 {
   align-self: center;
 }
 
+/* format for column numbers */
 .colNumber {
   font-size: 1vw;
   font-family: Arial, Helvetica, sans-serif;
@@ -49,6 +59,7 @@ h2 {
   align-self: end;
 }
 
+/* styling of element box excluding background colour */
 .elementBox {
   border-style: solid;
   border-color: gray;
@@ -57,6 +68,7 @@ h2 {
   text-align: center;
 }
 
+/* styling of text within each element box */
 .atomicNumber {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1vw;
@@ -78,6 +90,7 @@ h2 {
   font-size: 0.75vw;
 }
 
+/* element box colours */
 .yellow {
   background-color: #ffffc5;
 }
@@ -114,14 +127,14 @@ h2 {
   background-color: #aeffff;
 }
 
+/* to hide image until needed */
 #image {
+  width: 95vw;
   display: none;
 }
 
-.spacing {
-  height: 1vw;
-}
-
+/* media screen */
+/* breakpoint to change BG colour and reduce text in element boxes below certain width  */
 @media screen and (max-width: 800px) {
   body {
     background-color: #b9dbfc;
@@ -136,11 +149,16 @@ h2 {
   }
 }
 
+/* to replace table with image below certain width */
 @media screen and (max-width: 600px) {
   .periodicTable {
     display: none;
   }
   #image {
     display: block;
+  }
+  h1,
+  h2 {
+    display: none;
   }
 }
