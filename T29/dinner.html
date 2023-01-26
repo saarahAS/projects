@@ -15,21 +15,25 @@
   </head>
 
   <body>
+    <!--container with logo and menu bar that adjust according to screen size-->
     <header>
       <div class="flex-container">
-        <img class="logo" src="./logo.png" alt="my ivory plate logo" />
+        <!--clickig logo on any page will take user to homepage-->
+        <a href="./index.html"
+          ><img class="logo" src="./logo.png" alt="my ivory plate logo"
+        /></a>
 
         <nav>
           <ul class="menu">
             <li class="menuItem"><a href="./index.html">home</a></li>
             <li class="menuItem"><a href="./about.html">about</a></li>
             <li class="menuItem">
-              <a href="mailto:myivoryplate@outlook.com">contact</a>
+              <a href="mailto:myivoryplate@outlook.com" target="_blank"
+                >contact</a
+              >
             </li>
           </ul>
         </nav>
-
-        <div class="menuIcon"></div>
       </div>
     </header>
 
@@ -40,8 +44,17 @@
     <main>
       <h1>what's on your plate today?</h1>
 
-      <h2> dinner recipes </h2>
+      <nav>
+        <!--links to various pages on the site-->
+        <ul class="recipeCategories">
+          <li class="category"><a href="./breakfast.html">breakfast</a></li>
+          <li class="category"><a href="./snacks.html">snacks</a></li>
+          <li class="category"><a href="./dinner.html">dinner</a></li>
+        </ul>
 
+        <h2>dinner recipes</h2>
+      </nav>
+      <!-- image container has 3 images in a row, when the screen is shrunk they stack on top of each other into 3 columns-->
       <div class="imageGrid">
         <article>
           <img
@@ -69,7 +82,6 @@
       </div>
 
       <p class="quote">"the secret ingredient is always love"</p>
-
     </main>
   </body>
 </html>

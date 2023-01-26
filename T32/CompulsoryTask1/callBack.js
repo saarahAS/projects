@@ -5,28 +5,26 @@
 let intervalID;
 let counter = 0;
 
-// setInterval() function takes in startCounter() to increase counter every second (1000ms) and outputs it to the console
-let startCounter = function () {
-  counter++;
-  console.log(counter);
-};
-intervalID = setInterval(startCounter, 1000);
-
-function stopCounter() {
-  // add the logic required to stop the counter
-  // using clearInterval()
-  clearInterval(intervalID);
+let startCounter = function() {
+    // logic  for incrementing the counter and outputting to the console every 1 second(1000ms)
+    intervalID = setInterval(() => {
+      counter ++
+      console.log(counter)
+    }, 1000
+     
+    );
 }
 
-let startButton = document
-  .getElementById("start")
-  .addEventListener("click", startCounter);
+// logic required to stop the counter using clearInterval()
+function stopCounter() {
+  clearInterval(intervalID)
+}
+
+let startButton = document.getElementById("start")
 let stopButton = document.getElementById("stop");
 
-// the event listener is missing a callback function argument
-// this button should start the outputting of the counter to the console
-//startButton.addEventListener("click", startCounter);
+// callback function argument added to the event listener to start outputting the counter to the console
+startButton.addEventListener("click", startCounter);
 
-// the event listener is missing a callback function argument
-// this button should the counter from outputting to the console
+// callback function argument added to the event listener to stop the counter from outputting to the console
 stopButton.addEventListener("click", stopCounter);

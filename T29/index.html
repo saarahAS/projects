@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>my ivory plate</title>
     <link rel="stylesheet" href="./myIPstyle.css" />
+    <!--added custom fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,14 +17,19 @@
 
   <body>
     <header>
+      <!--container with logo and menu bar that adjust according to screen size-->
       <div class="flex-container">
-        <img class="logo" src="./logo.png" alt="my ivory plate logo" />
+        <!--clickig logo on any page will take user to homepage-->
+        <a href="./index.html"
+          ><img class="logo" src="./logo.png" alt="my ivory plate logo"
+        /></a>
 
         <nav>
           <ul class="menu">
             <li class="menuItem"><a href="./index.html">home</a></li>
             <li class="menuItem"><a href="./about.html">about</a></li>
             <li class="menuItem">
+              <!--link opens email in new tab-->
               <a href="mailto:myivoryplate@outlook.com" target="_blank"
                 >contact</a
               >
@@ -41,12 +47,14 @@
       <h1>what's on your plate today?</h1>
 
       <nav>
+        <!--links to various pages on the site-->
         <ul class="recipeCategories">
           <li class="category"><a href="./breakfast.html">breakfast</a></li>
           <li class="category"><a href="./snacks.html">snacks</a></li>
           <li class="category"><a href="./dinner.html">dinner</a></li>
         </ul>
       </nav>
+      <!-- image container has 3 images in a row, when the screen is shrunk they stack on top of each other into 3 columns-->
       <div class="imageGrid">
         <article>
           <img
@@ -73,8 +81,10 @@
         </article>
       </div>
 
+      <!--quote-->
       <p class="quote">"the secret ingredient is always love"</p>
 
+      <!--table with a meal plan-->
       <div>
         <h2>weekly meal plan</h2>
         <table class="mealPlan">
@@ -140,6 +150,7 @@
       <br />
       <br />
 
+      <!--container with a survey and image-->
       <div class="flex-container2">
         <div class="leftContainter">
           <p class="survey">what would you like to see more of?</p>
@@ -160,6 +171,7 @@
         </div>
 
         <div class="rightContainter">
+          <!--image that links to external instagram page when clicked-->
           <a href="https://www.instagram.com/myivoryplate/" target="_blank"
             ><img class="picture" src="./pic.png"
           /></a>
@@ -168,6 +180,7 @@
     </main>
 
     <footer>
+      <!--option to subscribe to email newsletter-->
       <h3 class="subscribe">inspo to your inbox:</h3>
       <div class="form">
         <form action="/action_page.php">

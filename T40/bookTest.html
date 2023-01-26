@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <body onload="myLoad()">
+    <form>
+      <label for="title">Title:</label>
+      <input
+        type="text"
+        placeholder="add title"
+        name="title"
+        id="title"
+        required
+      />
+
+      <label for="author">Author:</label>
+      <input
+        type="text"
+        placeholder="add author"
+        name="author"
+        id="author"
+        required
+      />
+
+      <label for="age">Genre:</label>
+      <input type="text" placeholder="add genre" name="genre" id="genre" />
+
+      <label for="age">Review:</label>
+      <input
+        type="text"
+        placeholder="write your review"
+        name="review"
+        id="review"
+      />
+
+      <label for="rating">Rating: </label>
+      <select id="rating">
+        <option value="">--Please choose an option--</option>
+        <option value="1">1 star</option>
+        <option value="2">2 star</option>
+        <option value="3">3 star</option>
+        <option value="4">4 star</option>
+        <option value="5">5 star</option>
+      </select>
+
+      <button onclick="addBook()">Add book to list</button>
+    </form>
+
+    <ul id="bookList"></ul>
+
+    <script type="text/javascript" src="bookTest.js"></script>
+  </body>
+</html>

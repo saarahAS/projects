@@ -1,0 +1,28 @@
+Q1. Explain what protocol is.
+A1> a protocol is a set of defined rules to follow when performing tasks so that they all follow one standard.
+
+Q2. HTTP is built on top of which protocol?
+A2> stateless protocol
+
+Q3. If a request is successful, what will the status code of the response be?
+A3> 200-299
+
+Q4. What methods are the CRUD equivalents in HTTP?
+A4> GET, HEAD, POST, OPTIONS
+
+Q5. What is a stateless protocol?
+A5> a stateless protocol is when a http request does not relate to any previous requests. 
+the server doesn't hold any information or session state for previous requests, so the response is given based on the current state
+
+Q6. Which of the following are valid MIME types? 
+A6> text/javascript, text/calendar, image/jpeg, 
+
+Q7. Which status message can you expect if a server does not allow you permission to request a specific resource?
+A7> 403 Forbidden
+
+text/time
+image/jpeg
+text/javascript
+text/jsx
+image/psd
+text/calendar
