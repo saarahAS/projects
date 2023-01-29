@@ -1,11 +1,10 @@
-let booksArray = []; //Create an empty array that we will use to store all the Person objects created.
+let booksArray = []; // empty array that stores all the Book objects created.
 
 function myLoad() {
-  let htmlSelect = document.getElementById("bookList");
-  htmlSelect.style.visibility = "hidden";
+  let bookList = document.getElementById("bookList");
+  //   bookList.style.visibility = "hidden";
 
   if (sessionStorage.getItem("hasCodeRunBefore") === null) {
-    // let arrayOfBookObjects = [];
     sessionStorage.setItem("books", JSON.stringify(booksArray));
     sessionStorage.setItem("hasCodeRunBefore", true);
   } else {
@@ -20,17 +19,91 @@ function myLoad() {
         book.genre
       )}<br>Review: ${JSON.stringify(book.review)}<br>Rating:${JSON.stringify(
         book.rating
-      )}<hr>`;
-      htmlSelect.appendChild(listItem);
+      )}<br><br>`;
+      let deleteBook = document.createElement("button");
+      deleteBook.innerHTML = "Delete";
+
+      deleteBook.addEventListener("click", () => {
+        listItem.remove();
+        let updatedBookArray = booksArray.splice(i, 1);
+        // console.log(`deleted: ${JSON.stringify(updatedBookArray)}`);
+        // console.log(`remaining: ${JSON.stringify(booksArray)}`);
+        sessionStorage.setItem("books", JSON.stringify(booksArray));
+      });
+      let headerRow = document.createElement("hr");
+
+      const editBook = document.createElement("button");
+      editBook.innerHTML = "Edit";
+
+      editBook.addEventListener("click", () => {
+        const edit = prompt(
+          "Which category would you like to edit? Please enter: Title, Author, Genre, Review or Rating."
+        ).toLowerCase();
+
+        switch (edit) {
+          case "title":
+            const editTitle = prompt("Please enter the edited title name.");
+            book.title = editTitle;
+            sessionStorage.setItem("books", JSON.stringify(booksArray));
+            //auto refresh page to display the change. learnt from: https://www.w3schools.com/jsref/met_loc_reload.asp
+            location.reload();
+            break;
+          case "author":
+            const editAuthor = prompt("Please enter the edited author name.");
+            book.author = editAuthor;
+            sessionStorage.setItem("books", JSON.stringify(booksArray));
+            location.reload();
+            break;
+          case "genre":
+            const editGenre = prompt("Please enter the edited genre.");
+            book.genre = editGenre;
+            sessionStorage.setItem("books", JSON.stringify(booksArray));
+            location.reload();
+            break;
+          case "review":
+            const editReview = prompt("Please enter the edited review.");
+            book.review = editReview;
+            sessionStorage.setItem("books", JSON.stringify(booksArray));
+            location.reload();
+            break;
+          case "rating":
+            const editRating = prompt(
+              "Please enter the edited rating as a number from 1-5."
+            );
+            if (isNaN(editRating)) {
+              alert("Error. Please enter a number from 1-5");
+            } else if (editRating < 1 || editRating > 5) {
+              alert("Error. Please enter a number from 1-5");
+            } else if (editRating >= 1 || editRating >= 5) {
+              book.rating = editRating;
+            }
+
+            sessionStorage.setItem("books", JSON.stringify(booksArray));
+            location.reload();
+            break;
+
+          // error if unexpected input
+          default:
+            alert("Error: Invalid entry. Please try again.");
+            break;
+        }
+        console.log("edited");
+      });
+      listItem.appendChild(editBook);
+      listItem.appendChild(deleteBook);
+
+      listItem.appendChild(headerRow);
+      bookList.appendChild(listItem);
     }
-    if (booksArray.length > 0) {
-      //Only make the select element visible once there is at least one person object added that the user can select.
-      htmlSelect.style.visibility = "visible";
-    }
+
+    // if (booksArray.length > 0) {
+    //   //Only make the select element visible once there is at least one Book object added
+    //   bookList.style.visibility = "visible";
+    // }
   }
 }
 
-//Below we create the constructor function that will be used to create all Person objects.
+// constructor function that will be used to create Book objects
 function Book(title, author, genre, review, rating) {
   this.title = title;
   this.author = author;
@@ -39,11 +112,6 @@ function Book(title, author, genre, review, rating) {
   this.rating = rating;
 }
 
-/* the function below will be called every time the user clicks on the button to add a person on the 
-HTML page. Each time this happens we will retrieve the data about the person from the form on the HTML page
-that the user has comnpleted. We call the Person constructor function and pass through all this data as
-arguments to create a new Person object. We then add the object to the array of people objects using the push method
-(pers.push). Because we want this information to be available accross page loads, we add the updated array of people to sessionStorage. */
 function addBook() {
   book = JSON.parse(sessionStorage.getItem("books"));
   let newBook = new Book(
@@ -56,32 +124,3 @@ function addBook() {
   book.push(newBook);
   sessionStorage.setItem("books", JSON.stringify(book));
 }
-
-/* When the user chooses a different person from the select (dropdown) element on the HTML page,
-the function below will be called. 
-
-This function adds a function called bio() to the person object that 
-the user has selected and then calls that method to execute it. 
-
-We know which person object the user has selected because the index of the array where the person object is stored is passed through to this function.
-Have a look at the HTML page to see how this information is passed through to this method. "ChangeActiveUser(this.value)" is 
-used. 'this.value' refers to the value of the currently selected option element. Now notice in the function
-myLoad() (above) that 'i', which is the index of the object element in the pers array, is assigned to each option element that 
-we created when we added each option element to the select element as the page loaded. */
-// function ChangeActiveUser(indexOfPersonObj) {
-//     booksArray[indexOfPersonObj].bio = function() {
-//         alert(
-//             this.name.first +
-//                 " " +
-//                 this.name.last +
-//                 " is " +
-//                 this.age +
-//                 " years old. " +
-//                 this.name.first +
-//                 " likes " +
-//                 this.interests +
-//                 "."
-//         );
-//     };
-//     booksArray[indexOfPersonObj].bio();
-// }
