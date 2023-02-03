@@ -20,9 +20,3 @@ A6> text/javascript, text/calendar, image/jpeg,
 Q7. Which status message can you expect if a server does not allow you permission to request a specific resource?
 A7> 403 Forbidden
 
-text/time
-image/jpeg
-text/javascript
-text/jsx
-image/psd
-text/calendar

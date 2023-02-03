@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+  <!-- calling function from js file to check if code has been run before -->
   <body onload="myLoad()">
+    <!-- form to take in user input to create Book objects -->
     <form>
       <label for="title">Title:</label>
       <input
@@ -41,9 +43,11 @@
         <option value="5">5 star</option>
       </select>
 
+      <!-- button that calls function from js file to add user inputs into Book object -->
       <button onclick="addBook()">Add book to list</button>
     </form>
 
+    <!-- to append list items to -->
     <ol id="bookList"></ol>
 
     <script type="text/javascript" src="bookTest.js"></script>
