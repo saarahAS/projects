@@ -2,11 +2,22 @@
 <html lang="en">
   <head>
     <title>First HTML page with external Script</title>
+    <link rel="stylesheet" href="./myStyle.css" />
   </head>
 
   <body>
     <p>Here's a list:</p>
-    <ul id ="myList"></ul>
+      <input
+        type="text"
+        placeholder="add item"
+        name="addItem"
+        id="input"
+        required
+        onkeyup="addItemOnEnter(event)"
+      />
+
+      <button id="addButton" onclick="addItem()">add</button>
+    <ul id="itemList"></ul>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
