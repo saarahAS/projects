@@ -61,23 +61,56 @@ let expense5 = new Expenses("benefits", 100, true);
 // let disposableIncome = totalIncome - totalExpenses
 // console.log(disposableIncome)
 
-// let inputIncome = prompt("Add another entry to Income")
-// let inputExpense = prompt("Add another entry to Expenses");
 let incomeArray =[income1, income2, income3, income4, income5]
 let expenseArray = [expense1, expense2, expense3, expense4, expense5]
 
+// sum of array method from: https://stackoverflow.com/questions/23247859/better-way-to-sum-a-property-value-in-an-arrayß
+const calculateSum = (obj) => obj
+  .map(items => items.amount)
+  .reduce((prev, curr) => prev + curr, 0);
+
 function myLoad() {
+  clearList("incomeList")
   for (let i = 0; i < incomeArray.length; i++) {
     const income = incomeArray[i];
 
-let item = `Income: ${JSON.stringify(
+    let item = `Income: ${JSON.stringify(
       income.name
-    )}<br>Amount: ${JSON.stringify(
+      )}<br>Amount: ${JSON.stringify(
       income.amount
     )}<br>Recurring payment:${JSON.stringify(
       income.recurring
     )}<br><br>`;
 
-displayItem(item, "incomeList")
-}}
+    displayItem(item, "incomeList")
+    }
 
+   let disposableIncome = document.getElementById("disposableIncome")
+   disposableIncome.innerHTML = calculateSum(incomeArray)
+}
+
+function clearList(listID) {
+  let htmlList = document.getElementById(listID);
+htmlList.innerHTML = ""
+}
+function addIncome() {
+let incomeName = prompt("Please enter income name")
+let incomeAmount = Number(prompt("Please enter income amount"))
+let incomeRecur = prompt("Please Y/N if income is recurring.").toUpperCase() ==  "Y"
+
+let newIncome = new Income(incomeName, incomeAmount, incomeRecur)
+incomeArray.push(newIncome)
+
+myLoad()
+}
+
+function assignSavings() {
+  let savingsAmount = Number(prompt("Please enter amount to add to savings"))
+  // if < disposable
+  let totalIncome = calculateSum(incomeArray)
+  let totalExpenses = calculateSum(expenseArray)
+  let disposableIncome = totalIncome-totalExpenses
+  let remaining = disposableIncome - savingsAmount
+  alert(`Disposable income remaining: ${remaining}`)
+
+}
