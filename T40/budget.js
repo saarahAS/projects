@@ -1,32 +1,15 @@
-let incomeArray =[]
-let expenseArray = []
 
-function myLoad() {
-  let incomeList = document.getElementById("incomeList");
 
-  if (sessionStorage.getItem("hasCodeRunBefore") === null) {
-    sessionStorage.setItem("income", JSON.stringify(incomeArray));
-    sessionStorage.setItem("hasCodeRunBefore", true);
-  } else {
-    incomeArray = JSON.parse(sessionStorage.getItem("income")); //Get the array of person objects from sessionStorage and assign it to the array 'pers'
-    for (let i = 0; i < incomeArray.length; i++) {
-      const inc = incomeArray[i];
+function displayItem(item, listID) {
+  // creating list element
+  let htmlList = document.getElementById(listID);
+  let listItem = document.createElement("li");
+  listItem.innerHTML = item
+  htmlList.appendChild(listItem);
+}
 
-      let listItem = document.createElement("li");
-      listItem.innerHTML = `Income: ${JSON.stringify(
-        income1.name
-      )}<br>Genre: ${JSON.stringify(
-        income1.amount
-      )}<br>Rating:${JSON.stringify(
-        income1.recurring
-      )}<br><br>`;
-      // let deleteBook = document.createElement("button");
-      // deleteBook.innerHTML = "Delete";
 
-      console.log(listItem)
-}}}
-
-constructor function that will be used to create Book objects
+// constructor function that will be used to create Book objects
 function Income(name, amount, recurring) {
   this.name = name;
   this.amount = amount;
@@ -80,3 +63,21 @@ let expense5 = new Expenses("benefits", 100, true);
 
 // let inputIncome = prompt("Add another entry to Income")
 // let inputExpense = prompt("Add another entry to Expenses");
+let incomeArray =[income1, income2, income3, income4, income5]
+let expenseArray = [expense1, expense2, expense3, expense4, expense5]
+
+function myLoad() {
+  for (let i = 0; i < incomeArray.length; i++) {
+    const income = incomeArray[i];
+
+let item = `Income: ${JSON.stringify(
+      income.name
+    )}<br>Amount: ${JSON.stringify(
+      income.amount
+    )}<br>Recurring payment:${JSON.stringify(
+      income.recurring
+    )}<br><br>`;
+
+displayItem(item, "incomeList")
+}}
+

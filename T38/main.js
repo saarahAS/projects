@@ -6,12 +6,17 @@ let groceries = ["apples", "bananas", "bread", "milk"];
 function displayItem(item, index) {
   // creating list element
   let listItem = document.createElement("li");
-  listItem.innerHTML = item;
   listItem.id = `groceryList${index}`;
-  listItem.addEventListener("click", () => strikeItem(index))
   htmlList.appendChild(listItem);
 
-  // creating span element
+    // creating span element for list item
+  let textElement = document.createElement("span");
+  textElement.innerHTML = item
+  textElement.addEventListener("click", () => strikeItem(index));
+  listItem.appendChild(textElement);
+
+
+  // creating span element for x 
   let spanElement = document.createElement("span");
   spanElement.className = "close";
   spanElement.innerHTML = "\u00d7";
@@ -23,11 +28,12 @@ function displayItem(item, index) {
 const deleteItem = (index) => {
   groceries.splice(index, 1);
   let item = document.getElementById(`groceryList${index}`);
-  // comment reason
+  // using .remove to keep html and javascript index in sync (instead of style.display)
   item.remove();
 // item.style.display = "none";
 };
 
+// function to change display to strike through item using css class
 const strikeItem = (index) => {
   let item = document.getElementById(`groceryList${index}`);
   item.className = item.className == "checked" ? "unchecked": "checked";
@@ -54,6 +60,7 @@ const addItem = () => {
   }
 };
 
+// add item to list if user presses Enter key
 const addItemOnEnter = (e) => {
 if (e.key == "Enter") {
   addItem()

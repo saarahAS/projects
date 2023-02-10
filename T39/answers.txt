@@ -2,13 +2,13 @@ Q1. Explain what protocol is.
 A1> a protocol is a set of defined rules to follow when performing tasks so that they all follow one standard.
 
 Q2. HTTP is built on top of which protocol?
-A2> stateless protocol - hyper text transfer protocol
+A2> TCP/IP protocols
 
 Q3. If a request is successful, what will the status code of the response be?
 A3> 200-299
 
 Q4. What methods are the CRUD equivalents in HTTP?
-A4> GET, HEAD, POST, OPTIONS- POST, GET, PATCH, DELETE
+A4> POST, GET, PUT, PATCH, DELETE
 
 Q5. What is a stateless protocol?
 A5> a stateless protocol is when a http request does not relate to any previous requests. 

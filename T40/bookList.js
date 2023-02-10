@@ -31,7 +31,7 @@ function myLoad() {
       deleteBook.addEventListener("click", () => {
         listItem.remove();
         // removing item from array
-        let updatedBookArray = booksArray.splice(i, 1);
+        let booksArray = booksArray.splice(i, 1);
 // updating session storage with new array without the deleted item 
         sessionStorage.setItem("books", JSON.stringify(booksArray));
       });
@@ -87,10 +87,10 @@ function myLoad() {
             const editRating = prompt(
               "Please enter the edited rating as a number from 1-5."
             );
-            // to ensure input is a number
-            if (Number.isInteger(editRating)) {
-              alert("Error. Please enter a number from 1-5");
-              // to ensure input is betwwen 1-5
+            // to ensure input is a whole number
+            if (!Number.isInteger(editRating)) {
+              alert("Error. Please enter a whole number from 1-5");
+              // to ensure input is between 1-5
             } else if (editRating < 1 || editRating > 5) {
               alert("Error. Please enter a number from 1-5");
             } else if (editRating >= 1 || editRating >= 5) {
