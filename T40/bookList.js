@@ -31,7 +31,7 @@ function myLoad() {
       deleteBook.addEventListener("click", () => {
         listItem.remove();
         // removing item from array
-        let booksArray = booksArray.splice(i, 1);
+        booksArray.splice(i, 1);
 // updating session storage with new array without the deleted item 
         sessionStorage.setItem("books", JSON.stringify(booksArray));
       });
