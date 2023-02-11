@@ -63,7 +63,7 @@ function myLoad() {
   for (let i = 0; i < incomeArray.length; i++) {
     const income = incomeArray[i];
 
-    let item = `Name: ${JSON.stringify(
+    let item = `Income: ${JSON.stringify(
       income.name
     )}<br>Amount: ${JSON.stringify(
       income.amount
@@ -71,21 +71,9 @@ function myLoad() {
 
     displayItem(item, "incomeList");
   }
-  clearList("expensesList");
-  for (let i = 0; i < expenseArray.length; i++) {
-    const expense = expenseArray[i];
 
-    let item = `expense: ${JSON.stringify(
-      expense.name
-    )}<br>Amount: ${JSON.stringify(
-      expense.amount
-    )}<br>Recurring payment:${JSON.stringify(expense.recurring)}<br><br>`;
-
-    displayItem(item, "expensesList");
-  }
-  const disposableIncome = document.getElementById("disposableIncome");
-  disposableIncome.innerHTML =
-    calculateSum(incomeArray) - calculateSum(expenseArray);
+  let disposableIncome = document.getElementById("disposableIncome");
+  disposableIncome.innerHTML = calculateSum(incomeArray);
 }
 
 function clearList(listID) {
@@ -104,27 +92,12 @@ function addIncome() {
   myLoad();
 }
 
-function addExpense() {
-  let expenseName = prompt("Please enter expense name");
-  let expenseAmount = Number(prompt("Please enter expense amount"));
-  let expsenseRecur =
-    prompt("Please Y/N if income is recurring.").toUpperCase() == "Y";
-
-  let newExpense = new Expenses(expenseName, expenseAmount, expsenseRecur);
-  expenseArray.push(newExpense);
-
-  myLoad();
-}
-
 function assignSavings() {
   let savingsAmount = Number(prompt("Please enter amount to add to savings"));
+  // if < disposable
   let totalIncome = calculateSum(incomeArray);
   let totalExpenses = calculateSum(expenseArray);
   let disposableIncome = totalIncome - totalExpenses;
   let remaining = disposableIncome - savingsAmount;
-  if (savingsAmount <= disposableIncome) {
-    alert(`Disposable income remaining: ${remaining}`);
-  } else {
-    alert("Amount must be less than or equal to disposable income");
-  }
+  alert(`Disposable income remaining: ${remaining}`);
 }

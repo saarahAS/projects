@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
   <body onload="myLoad()">
-
-       
+    <p>Income:</p>
     <ol id="incomeList"></ol>
     <button onclick="addIncome()">Add income</button>
 
-    <div id="disposableIncome"> </div>
+    <p>Expenses:</p>
+    <ol id="expensesList"></ol>
+    <button onclick="addExpense()">Add expense</button>
+
+    <p>Disposable Income:</p>
+    <div id="disposableIncome"></div>
     <button onclick="assignSavings()">Assign savings</button>
+    
+    <p>Savings:</p>
 
     <script type="text/javascript" src="budget.js"></script>
   </body>
