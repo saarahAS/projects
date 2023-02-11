@@ -42,23 +42,16 @@ let expense3 = new Expenses("broadband", 100, false);
 let expense4 = new Expenses("groceries", 400, true);
 let expense5 = new Expenses("benefits", 100, true);
 
-// let totalIncome = (income1.amount + income2.amount + income3.amount + income4.amount + income5.amount)
-// console.log(totalIncome)
-
-// let totalExpenses = (expense1.amount +expense2.amount +expense3.amount+expense4.amount+expense5.amount)
-// console.log(totalExpenses)
-
-// let disposableIncome = totalIncome - totalExpenses
-// console.log(disposableIncome)
-
-let incomeArray = [income1, income2, income3, income4, income5];
-let expenseArray = [expense1, expense2, expense3, expense4, expense5];
+let incomeArray = [];
+let expenseArray = [];
 
 // sum of array method from: https://stackoverflow.com/questions/23247859/better-way-to-sum-a-property-value-in-an-arrayß
 const calculateSum = (obj) =>
   obj.map((items) => items.amount).reduce((prev, curr) => prev + curr, 0);
 
 function myLoad() {
+  loadIncome();
+
   clearList("incomeList");
   for (let i = 0; i < incomeArray.length; i++) {
     const income = incomeArray[i];
@@ -71,11 +64,12 @@ function myLoad() {
 
     displayItem(item, "incomeList");
   }
+  loadExpenses();
   clearList("expensesList");
   for (let i = 0; i < expenseArray.length; i++) {
     const expense = expenseArray[i];
 
-    let item = `expense: ${JSON.stringify(
+    let item = `Name: ${JSON.stringify(
       expense.name
     )}<br>Amount: ${JSON.stringify(
       expense.amount
@@ -86,6 +80,8 @@ function myLoad() {
   const disposableIncome = document.getElementById("disposableIncome");
   disposableIncome.innerHTML =
     calculateSum(incomeArray) - calculateSum(expenseArray);
+  console.log(calculateSum(incomeArray));
+  console.log(calculateSum(expenseArray));
 }
 
 function clearList(listID) {
@@ -100,6 +96,7 @@ function addIncome() {
 
   let newIncome = new Income(incomeName, incomeAmount, incomeRecur);
   incomeArray.push(newIncome);
+  saveIncomes();
 
   myLoad();
 }
@@ -112,7 +109,7 @@ function addExpense() {
 
   let newExpense = new Expenses(expenseName, expenseAmount, expsenseRecur);
   expenseArray.push(newExpense);
-
+  saveExpenses();
   myLoad();
 }
 
@@ -127,4 +124,34 @@ function assignSavings() {
   } else {
     alert("Amount must be less than or equal to disposable income");
   }
+}
+
+function loadIncome() {
+  let incomes = sessionStorage.getItem("incomes");
+  if (incomes === null) {
+    // if incomes don't exist in session storage, load it with sample data
+    incomeArray = [income1, income2, income3, income4, income5];
+    saveIncomes();
+  } else {
+    incomeArray = JSON.parse(sessionStorage.getItem("incomes"));
+  }
+}
+
+function saveIncomes() {
+  sessionStorage.setItem("incomes", JSON.stringify(incomeArray));
+}
+
+function loadExpenses() {
+  let expenses = sessionStorage.getItem("expenses");
+  if (expenses === null) {
+    // if incomes don't exist in session storage, load it with sample data
+    expenseArray = [expense1, expense2, expense3, expense4, expense5];
+    saveExpenses();
+  } else {
+    expenseArray = JSON.parse(sessionStorage.getItem("expenses"));
+  }
+}
+
+function saveExpenses() {
+  sessionStorage.setItem("expenses", JSON.stringify(expenseArray));
 }
