@@ -1,6 +1,4 @@
 
-link js to html
-    on load html - display images + recipes using js 
 
 button on each image
     on click method 

@@ -9,10 +9,21 @@ function onLoad() {
     let article = document.createElement("article");
     let img = document.createElement("img");
     img.className = "recipeImage";
-
-    img.src = recipes[i].src;
-    img.alt = recipes[i].name;
+    const { name, src } = recipes[i];
+    img.src = src;
+    img.alt = name;
     article.appendChild(img);
+
+    let saveForLater = document.createElement("button");
+    saveForLater.className = "saveForLater";
+    article.appendChild(saveForLater);
+    saveForLater.textContent = "save";
+    saveForLater.addEventListener("click", () => {
+      console.log(`${name} clicked`);
+      //   listItem.remove();
+      //   booksArray.splice(i, 1);
+      //   sessionStorage.setItem("books", JSON.stringify(booksArray));
+    });
 
     let imageGrid = document.getElementById("imageGrid");
     imageGrid.appendChild(article);
