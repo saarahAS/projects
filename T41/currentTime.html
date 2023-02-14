@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Current Time</title>
+  </head>
+  <body>
+    <div id="time"></div>
+    <script>
+      function displayTime() {
+        // to get date and time info
+        let time = new Date();
+        // to extract time info only
+        let timeOnly =
+          time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+        let htmlRef = document.getElementById("time");
+        // filling the html div with the extracted info
+        htmlRef.textContent = `Current time: ${timeOnly}`;
+      }
+      // function called the first time so there is no delay in displaying the time when opening the page
+      displayTime();
+      // then function called continuiously every second to update time automatically
+      setInterval(displayTime, 1000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fetch Example</title>
+  </head>
+  <body>
+    <script>
+      // fetching joke from the following link
+      fetch("https://api.chucknorris.io/jokes/random")
+        // converting data from result of fetch into object
+        .then((res) => res.json())
+        // outputting object value to html <div> to display to user
+        .then((result) => {
+          let htmlRef = document.getElementById("joke");
+          htmlRef.textContent = JSON.stringify(result.value);
+        }),
+        //in case fetch does not run, return error
+        (error) => {
+          console.log(error);
+        };
+    </script>
+
+    <div id="joke"></div>
+  </body>
+</html>
