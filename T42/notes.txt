@@ -8,3 +8,6 @@ button on each image
 saved page
     load local storage
     
+display object from storage 
+
+

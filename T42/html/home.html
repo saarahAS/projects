@@ -20,21 +20,21 @@
       <!--container with logo and menu bar that adjust according to screen size-->
       <div class="flex-container">
         <!--clickig logo on any page will take user to homepage-->
-        <a href="./index.html"
+        <a href="../html/home.html"
           ><img class="logo" src="../images/logo.png" alt="my ivory plate logo"
         /></a>
 
         <nav>
           <ul class="menu">
-            <li class="menuItem"><a href="./home.html">home</a></li>
-            <li class="menuItem"><a href="./about.html">about</a></li>
-            <li class="menuItem"><a href="./savedItems.html">saved</a></li>
+            <li class="menuItem"><a href="../html/home.html">home</a></li>
+            <li class="menuItem"><a href="../html/about.html">about</a></li>
+            <li class="menuItem">
+              <a href="../html/savedItems.html">saved</a>
+            </li>
 
             <li class="menuItem">
               <!--link opens email in new tab-->
-              <a href="mailto:myivoryplate@outlook.com" target="_blank"
-                >contact</a
-              >
+              <a href="../html/contact.html">contact</a>
             </li>
           </ul>
         </nav>
@@ -161,7 +161,7 @@
       <!--option to subscribe to email newsletter-->
       <h3 class="subscribe">inspo to your inbox:</h3>
       <div class="form">
-        <form action="/action_page.php">
+        <form>
           <label for="fname">your name:</label><br />
           <input
             type="text"
@@ -179,6 +179,14 @@
           <input type="submit" value="Submit" />
         </form>
       </div>
+      <!-- form for user to add comments -->
+      <h3 id="comments" class="comments">leave a comment:</h3>
+      <input type="text" id="commentBox" placeholder="enter your comment" />
+      <button class="submitButton" id="submitButton" onclick="submitComment()">
+        Submit
+      </button>
+      <!-- comments will be displayed in <ul> -->
+      <ul id="commentSection" class="commentSection"></ul>
     </footer>
 
     <script type="text/javascript" src="../javascript/home.js"></script>

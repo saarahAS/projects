@@ -193,12 +193,17 @@ footer {
   display: inline-flex;
 }
 
-.saveForLater {
-  text-align: center;
-  color: red;
-  font-size: small;
-  font-style: italic;
+.comments {
+  border-radius: 2px;
+  background-color: #ebe6dc;
+  padding-left: 10px;
+  padding-right: 1px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #bcaa89;
+  display: inline-flex;
 }
+
 
 /* media query stack page into single column when the screen is small */
 @media screen and (max-width: 800px) {
@@ -217,4 +222,30 @@ footer {
   .recipeImage {
     width: 80vw;
   }
+}
+
+.contactForm {
+  text-align: center;
+}
+
+.contactFormLabels {
+  background-color: #ebe6dc;
+  border-radius: 2px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  font-weight: bold;
+  font-size: 18px;
+  color: #bcaa89;
+  display: inline-flex;
+}
+
+.emailLink{
+  text-align: center;
+  border-radius: 2px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  font-size: 18px;
+  color: #bcaa89;
 }
