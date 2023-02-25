@@ -4,11 +4,13 @@ const recipes = [
   { name: "pasta", src: "../images/pexels-engin-akyurt-1527603.jpg" },
 ];
 
+// empty arrays to fill with saved items, liked items and user comments
 let savedRecipes = [];
 let likedRecipes = [];
 let commentArray = [];
 
 function onLoad() {
+  // for loop to create images
   for (let i = 0; i < recipes.length; i++) {
     let article = document.createElement("article");
     let img = document.createElement("img");
@@ -19,6 +21,7 @@ function onLoad() {
     img.alt = name;
     article.appendChild(img);
 
+    // creating save for later button to save recipe
     let saveForLater = document.createElement("button");
     saveForLater.className = "saveForLater";
     article.appendChild(saveForLater);
@@ -26,9 +29,11 @@ function onLoad() {
     saveForLater.addEventListener("click", () => {
       saveRecipe(recipe);
       alert(`You have ${savedRecipes.length} saved recipe/s.`);
+      // change the button text for saved items
       saveForLater.textContent = "saved";
     });
 
+    // creating like  button to like recipe
     let likeButton = document.createElement("button");
     likeButton.className = "likeButton";
     article.appendChild(likeButton);
@@ -36,12 +41,14 @@ function onLoad() {
     likeButton.addEventListener("click", () => {
       likeRecipe(recipe);
       alert(`You have ${likedRecipes.length} liked recipe/s.`);
+      // change the button text for liked items
       likeButton.textContent = "liked";
     });
     let imageGrid = document.getElementById("imageGrid");
     imageGrid.appendChild(article);
   }
 
+  // displaying comments from local storage
   commentArray = JSON.parse(localStorage.getItem("comments"));
   if (commentArray === null) {
     commentArray = [];
@@ -52,21 +59,25 @@ function onLoad() {
   }
 }
 
+// function to like recipe
 function likeRecipe(recipe) {
   likedRecipes.push(recipe);
 }
+// function to save recipe
 function saveRecipe(recipe) {
   savedRecipes.push(recipe);
-
+  // saving recipe to local storage
   sessionStorage.setItem("recipesLocalStorage", JSON.stringify(savedRecipes));
 }
 
-//code for comment section
+//code for comment section below
 
+// function to submit submit comments linked to submit button in html
 function submitComment() {
   addComment();
 }
 
+// function to add and display comments
 const addComment = () => {
   let comment = document.getElementById("commentBox");
   let commentContent = comment.value;
@@ -75,10 +86,11 @@ const addComment = () => {
   comment.value = "";
   let i = commentArray.length - 1;
   displayItem(commentArray[i], i);
-
+  // storing comments to local storage
   localStorage.setItem("comments", JSON.stringify(commentArray));
 };
 
+// function to display comments
 function displayItem(item, index) {
   // creating list element
   let commentSection = document.getElementById("commentSection");
