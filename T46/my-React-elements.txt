@@ -1,0 +1,27 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+function display() {
+  const element = (
+    <div>
+      <h2>Date: {new Date().toLocaleDateString()}.</h2>
+      <h2>Time: {new Date().toLocaleTimeString()}.</h2>
+      <h3>Advantages of JS frameworks</h3>
+      <ul>
+        <li>Ready-made solutions for common coding problems</li>
+        <li>Less development, debugging and testing time</li>
+        <li>Wide array of libraries with various features to build on your imagination</li>
+        <li>Market-time for launching the product is faster than vanilla JS</li>
+        <p>Taken from Techliance Blog: https://shorturl.ac/79rby</p>
+      </ul>
+      <button onclick="window.location.href='https://github.com/saarahAS';">
+        My GitHub
+      </button>
+    </div>
+  );
+  root.render(<React.StrictMode>{element}</React.StrictMode>);
+}
+
+setInterval(display, 1000);

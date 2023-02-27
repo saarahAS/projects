@@ -14,12 +14,12 @@
     />
   </head>
 
-  <body onload="onLoad()">
+  <body>
     <!--container with logo and menu bar that adjust according to screen size-->
     <header>
       <div class="flex-container">
         <!--clickig logo on any page will take user to homepage-->
-        <a href="../html/home.html"
+        <a href="../html/home.png"
           ><img class="logo" src="../images/logo.png" alt="my ivory plate logo"
         /></a>
 
@@ -32,9 +32,7 @@
             </li>
 
             <li class="menuItem">
-              <a href="mailto:myivoryplate@outlook.com" target="_blank"
-                >contact</a
-              >
+              <a href="../html/contact.html">contact</a>
             </li>
           </ul>
         </nav>
@@ -51,18 +49,43 @@
       <nav>
         <!--links to various pages on the site-->
         <ul class="recipeCategories">
-          <li class="category"><a href="./breakfast.html">breakfast</a></li>
-          <li class="category"><a href="./snacks.html">snacks</a></li>
-          <li class="category"><a href="./dinner.html">dinner</a></li>
+          <li class="category">
+            <a href="../html/breakfast.html">breakfast</a>
+          </li>
+          <li class="category"><a href="../html/snacks.html">snacks</a></li>
+          <li class="category"><a href="../html/dinner.html">dinner</a></li>
         </ul>
 
-        <h2>my saved recipes</h2>
+        <h2>breakfast recipes</h2>
       </nav>
       <!-- image container has 3 images in a row, when the screen is shrunk they stack on top of each other into 3 columns-->
-      <div class="imageGrid" id="imageGrid"></div>
+      <div class="imageGrid">
+        <article>
+          <img
+            class="recipeImage"
+            src="https://www.ennerdalebrewery.co.uk/wp-content/uploads/woocommerce-placeholder.png"
+            alt="placeholder"
+          />
+        </article>
+
+        <article>
+          <img
+            class="recipeImage"
+            src="https://www.ennerdalebrewery.co.uk/wp-content/uploads/woocommerce-placeholder.png"
+            alt="placeholder"
+          />
+        </article>
+
+        <article>
+          <img
+            class="recipeImage"
+            src="https://www.ennerdalebrewery.co.uk/wp-content/uploads/woocommerce-placeholder.png"
+            alt="placeholder"
+          />
+        </article>
+      </div>
 
       <p class="quote">"the secret ingredient is always love"</p>
     </main>
-    <script type="text/javascript" src="../javascript/savedItems.js"></script>
   </body>
 </html>

@@ -67,7 +67,7 @@ function likeRecipe(recipe) {
 function saveRecipe(recipe) {
   savedRecipes.push(recipe);
   // saving recipe to local storage
-  sessionStorage.setItem("recipesLocalStorage", JSON.stringify(savedRecipes));
+  localStorage.setItem("recipesLocalStorage", JSON.stringify(savedRecipes));
 }
 
 //code for comment section below

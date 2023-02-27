@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my ivory plate</title>
+    <link rel="stylesheet" href="../css/myIPstyle.css" />
+    <!--added custom fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body onload="onLoad()">
+    <header>
+      <!--container with logo and menu bar that adjust according to screen size-->
+      <div class="flex-container">
+        <!--clickig logo on any page will take user to homepage-->
+        <a href="../html/home.html"
+          ><img class="logo" src="../images/logo.png" alt="my ivory plate logo"
+        /></a>
+
+        <nav>
+          <ul class="menu">
+            <li class="menuItem"><a href="../html/home.html">home</a></li>
+            <li class="menuItem"><a href="../html/about.html">about</a></li>
+            <li class="menuItem">
+              <a href="../html/savedItems.html">saved</a>
+            </li>
+
+            <li class="menuItem">
+              <a href="../html/contact.html">contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <br />
+    <br />
+    <br />
+
+    <main>
+      <h1>contact us</h1>
+
+      <form id="contactForm" class="contactForm">
+        <label for="Name" class="contactFormLabels">name</label>
+        <br />
+        <input type="text" id="Name" name="Name" required />
+        <br />
+        <label for="Email" class="contactFormLabels">email</label>
+        <br />
+
+        <input type="text" id="email" name="email" required />
+        <br />
+        <label for="Message" class="contactFormLabels"> message</label>
+        <br />
+
+        <textarea
+          id="Message"
+          name="Message"
+          rows="6"
+          maxlength="3000"
+          required
+        ></textarea>
+        <br />
+        <button type="submit">send</button>
+      </form>
+      <br />
+
+      <div class="emailLink">
+        or
+        <a href="mailto:myivoryplate@outlook.com" target="_blank">
+          <i>click here</i>
+        </a>
+        to email directly
+      </div>
+    </main>
+  </body>
+</html>

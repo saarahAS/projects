@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>my ivory plate</title>
     <link rel="stylesheet" href="../css/myIPstyle.css" />
-    <!--added custom fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,8 +15,8 @@
   </head>
 
   <body onload="onLoad()">
+    <!--container with logo and menu bar that adjust according to screen size-->
     <header>
-      <!--container with logo and menu bar that adjust according to screen size-->
       <div class="flex-container">
         <!--clickig logo on any page will take user to homepage-->
         <a href="../html/home.html"
@@ -33,7 +32,6 @@
             </li>
 
             <li class="menuItem">
-              <!--link opens email in new tab-->
               <a href="../html/contact.html">contact</a>
             </li>
           </ul>
@@ -46,40 +44,23 @@
     <br />
 
     <main>
-      <h1>contact us</h1>
+      <h1>what's on your plate today?</h1>
 
-      <form id="contactForm" class="contactForm">
-        <label for="Name" class="contactFormLabels">name</label>
-        <br />
-        <input type="text" id="Name" name="Name" required />
-        <br />
-        <label for="Email" class="contactFormLabels">email</label>
-        <br />
+      <nav>
+        <!--links to various pages on the site-->
+        <ul class="recipeCategories">
+          <li class="category"><a href="./breakfast.html">breakfast</a></li>
+          <li class="category"><a href="./snacks.html">snacks</a></li>
+          <li class="category"><a href="./dinner.html">dinner</a></li>
+        </ul>
 
-        <input type="text" id="email" name="email" required />
-        <br />
-        <label for="Message" class="contactFormLabels"> message</label>
-        <br />
+        <h2>my saved recipes</h2>
+      </nav>
+      <!-- image container has 3 images in a row, when the screen is shrunk they stack on top of each other into 3 columns-->
+      <div class="imageGrid" id="imageGrid"></div>
 
-        <textarea
-          id="Message"
-          name="Message"
-          rows="6"
-          maxlength="3000"
-          required
-        ></textarea>
-        <br />
-        <button type="submit">send</button>
-      </form>
-      <br />
-
-      <div class="emailLink">
-        or
-        <a href="mailto:myivoryplate@outlook.com" target="_blank">
-          <i>click here</i>
-        </a>
-        to email directly
-      </div>
+      <p class="quote">"the secret ingredient is always love"</p>
     </main>
+    <script type="text/javascript" src="../javascript/savedItems.js"></script>
   </body>
 </html>
