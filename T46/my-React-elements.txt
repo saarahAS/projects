@@ -6,9 +6,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 function display() {
   const element = (
     <div>
-      <h2>Date: {new Date().toLocaleDateString()}.</h2>
-      <h2>Time: {new Date().toLocaleTimeString()}.</h2>
-      <h3>Advantages of JS frameworks</h3>
+      <h2>Date: {new Date().toLocaleDateString()}</h2>
+      <h2>Time: {new Date().toLocaleTimeString()}</h2>
+      <h3>Advantages of JS frameworks:</h3>
       <ul>
         <li>Ready-made solutions for common coding problems</li>
         <li>Less development, debugging and testing time</li>
@@ -16,9 +16,11 @@ function display() {
         <li>Market-time for launching the product is faster than vanilla JS</li>
         <p>Taken from Techliance Blog: https://shorturl.ac/79rby</p>
       </ul>
-      <button onclick="window.location.href='https://github.com/saarahAS';">
-        My GitHub
-      </button>
+      
+      <a href="https://github.com/saarahAS">
+        <button>My GitHub</button>
+      </a>
+  
     </div>
   );
   root.render(<React.StrictMode>{element}</React.StrictMode>);

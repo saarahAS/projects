@@ -12,12 +12,28 @@ code {
     monospace;
 }
 
+/* profile pic positioning */
 img {
   float: left;
   margin: 5px;
-  width: 15vw;
+  width: 130px;
 }
 
-user {
-  text-align: justify;
+.itemName {
+  text-align: center;
+}
+
+/* shopping item card styling */
+.card {
+  margin: 20px;
+  margin-left: 40px;
+}
+
+h1 {
+  color: darkblue;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 20px;
+  margin-bottom: -20px;
+  font-weight: bold;
+  text-decoration: underline;
 }

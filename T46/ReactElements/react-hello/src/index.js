@@ -1,22 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import profilePicUser from "./profPic.png";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 
-function BasicExample() {
+// Bootstrap Card used to display cart items in cards
+function BasicExample({ shopping_item }) {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: "13rem" }} class="card">
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Card.Title class="itemName">{shopping_item}</Card.Title>
+
+        <Button style={{ width: "80px" }} variant="primary">
+          -1
+        </Button>
+        <Button style={{ width: "80px" }} variant="primary">
+          +1
+        </Button>
       </Card.Body>
     </Card>
   );
@@ -25,6 +28,7 @@ function BasicExample() {
 export default BasicExample;
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+// object to store user details
 const user = {
   name: "Bob",
   surname: "Ross",
@@ -41,31 +45,25 @@ const i = 0;
 
 root.render(
   <React.StrictMode>
-      {user.profile_picture} {user.name} {user.surname}
-      <br></br>
-      {user.date_of_birth}
-      <br></br>
-      {user.address}, {user.country}
-      <br></br>
-      Telephone: {user.telephone}
-      <br></br>
-      Company: {user.company}
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      Shopping cart:
-      <br></br>
-      {user.shopping_cart[i]}
-      <br></br>
-      {user.shopping_cart[i + 1]}
-      <br></br>
-      {user.shopping_cart[i + 2]}
-      <BasicExample/>
+    {user.profile_picture} {user.name} {user.surname}
+    <br></br>
+    {user.date_of_birth}
+    <br></br>
+    {user.address}, {user.country}
+    <br></br>
+    Telephone: {user.telephone}
+    <br></br>
+    Company: {user.company}
+    <br></br>
+    <br></br>
+    <h1>Shopping Cart</h1>
+    <br></br>
+    {/* src: https://upmostly.com/tutorials/how-to-use-map-in-react-applications */}
+    {user.shopping_cart.map((item) => (
+      <BasicExample shopping_item={item} />
+    ))}
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
